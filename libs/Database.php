@@ -24,27 +24,27 @@ class Database extends PDO{
     public function ekle($tabloisim,$sutunadlari,$veriler){  
         $sorgum=$this->prepare("insert into ".$tabloisim." (".$sutunadlari.") VALUES(?,?)");	
         if ($sorgum->execute($veriler)):
-            return $this->bilgi->basarili("EKLEME BAŞARILI",SİTE_URL."babasayfa");	
+            return $this->bilgi->basarili("EKLEME BAŞARILI",SITE_URL."babasayfa");	
         else:
-            return $this->bilgi->hata("HATA OLUŞTU",SİTE_URL."babasayfa");	
+            return $this->bilgi->hata("HATA OLUŞTU",SITE_URL."babasayfa");	
         endif;
     }
     
     public function silme($tabloisim,$kosul){       
         $sorgum=$this->prepare('delete from '.$tabloisim. ' where '.$kosul);
         if ($sorgum->execute()):
-            return $this->bilgi->basarili("SİLME BAŞARILI",SİTE_URL."babasayfa");	
+            return $this->bilgi->basarili("SİLME BAŞARILI",SITE_URL."babasayfa");	
         else:
-            return $this->bilgi->hata("HATA OLUŞTU",SİTE_URL."babasayfa");	
+            return $this->bilgi->hata("HATA OLUŞTU",SITE_URL."babasayfa");	
         endif;	
     }
 
     public function guncelle($tabloisim,$veriler,$kosul){
         $sorgum=$this->prepare("update ".$tabloisim." set baslik=?,icerik=?  where ".$kosul);
         if ($sorgum->execute($veriler)):
-            return $this->bilgi->basarili("GÜNCELLEME BAŞARILI",SİTE_URL."babasayfa");	
+            return $this->bilgi->basarili("GÜNCELLEME BAŞARILI",SITE_URL."babasayfa");	
         else:
-            return $this->bilgi->hata("HATA OLUŞTU",SİTE_URL."babasayfa");	
+            return $this->bilgi->hata("HATA OLUŞTU",SITE_URL."babasayfa");	
         endif;	
     }
 }

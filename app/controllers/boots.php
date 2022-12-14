@@ -3,6 +3,9 @@ class boots  extends Controller{
 	public function __construct(){
 		parent::__construct();
 	}
+public function boots(){
+		$this->anasayfa();
+	}
 	public function anasayfa(){
 		$kayitlarabak = $this->load->model("Ana_model");
 		$veri = $kayitlarabak->kayitlarigetir();

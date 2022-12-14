@@ -19,7 +19,7 @@
     <div class="row text-center">
       <div class="col-lg-12">
         <div class="col-lg-12 mt-5">
-          <form action="<?php echo SİTE_URL; ?>kayitguncelleson" method="post">
+          <form action="<?php echo SITE_URL; ?>kayitguncelleson" method="post">
                     
                     <div class="mb-3">
                         <label for="baslik" class="form-label">Başlık</label>
